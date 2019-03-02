@@ -1,1 +1,5 @@
-<li id="<%= post.id %>"><%= post.title %> <%= link_to 'editar', edit_post_path(post.id), data: {remote: true } %> </li>
+<li id="<%= post.id %>">
+  <%= post.title %> 
+  <%= link_to 'editar', edit_post_path(post.id), data: {remote: true } %> 
+  <%= link_to 'show',  post_path(post.id), data: {remote: true} %> 
+</li>

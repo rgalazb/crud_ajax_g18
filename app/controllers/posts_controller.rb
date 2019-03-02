@@ -4,6 +4,11 @@ class PostsController < ApplicationController
     @posts = Post.order(:id)
   end
 
+  def show 
+    @post = Post.find(params[:id])
+    respond_to :js
+  end
+
   def create 
     @post = Post.new(
       title: params[:post][:title]
