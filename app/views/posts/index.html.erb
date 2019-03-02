@@ -1,16 +1,12 @@
 
-
-
-
 <%= render 'form', perro: @post %>
-
 
 <ul id="post_list">
   <%= render @posts %>
 </ul>
 
 
-<div class="modal fade" tabindex="-1" role="dialog">
+<div id="modal-edit" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -20,7 +16,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+
       </div>
     </div>
   </div>
