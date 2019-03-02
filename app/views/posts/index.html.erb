@@ -2,17 +2,26 @@
 
 
 
-
-<%= form_with(model: @post) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.submit %>
-<% end %>
+<%= render 'form', perro: @post %>
 
 
 <ul id="post_list">
-  <% @posts.each do |post| %>
-    <li> <%= post.title %> </li>
-  <% end %>
+  <%= render @posts %>
 </ul>
+
+
+<div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+    </div>
+  </div>
+</div>
